@@ -1,0 +1,58 @@
+{
+    "daily1": {
+        "itemGrants": [
+            "AthenaDance:EID_SlowClap"
+        ],
+        "price": 200,
+        "rarity": "rare"
+    },
+    "daily2": {
+        "itemGrants": [
+            "AthenaPickaxe:Pickaxe_ID_038_Carrot"
+        ],
+        "price": 800,
+        "rarity": "super_rare"
+    },
+    "daily3": {
+        "itemGrants": [
+            "AthenaCharacter:CID_215_Athena_Commando_M_FootballReferee"
+        ],
+        "price": 800,
+        "rarity": "rare"
+    },
+    "daily4": {
+        "itemGrants": [
+            "AthenaPickaxe:Pickaxe_ID_032_Tactical"
+        ],
+        "price": 500,
+        "rarity": "rare"
+    },
+    "daily5": {
+        "itemGrants": [
+            "AthenaDance:EID_DustOffShoulders"
+        ],
+        "price": 200,
+        "rarity": "rare"
+    },
+    "daily6": {
+        "itemGrants": [
+            "AthenaDance:EID_TrueLove"
+        ],
+        "price": 200,
+        "rarity": "rare"
+    },
+    "featured1": {
+        "itemGrants": [
+            "AthenaCharacter:CID_255_Athena_Commando_F_HalloweenBunny"
+        ],
+        "price": 800,
+        "rarity": "rare"
+    },
+    "featured2": {
+        "itemGrants": [
+            "AthenaCharacter:CID_254_Athena_Commando_M_Zombie"
+        ],
+        "price": 800,
+        "rarity": "rare"
+    }
+}
