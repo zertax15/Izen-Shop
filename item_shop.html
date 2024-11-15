@@ -1,0 +1,245 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Izen Shop</title>
+        <meta http-equiv="refresh" content="5"> <!-- Refresh every 5 seconds -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://cdn.discordapp.com/attachments/1260286129639395461/1260635473437790311/Design_sem_nome_5.png?ex=669009c6&is=668eb846&hm=a694a0829b09b161f0e96f6cb23bb94432bff720c6d592bb40fa4f7fb8e8effd&" type="image/png">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                background: radial-gradient(circle at top, #111111, #000000);
+                color: white;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                overflow-x: hidden;
+                position: relative;
+            }
+
+            body::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                filter: blur(100px);
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header {
+                font-size: 1.75rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+
+            .header span {
+                margin-left: 1rem;
+                font-size: 1rem;
+                color: #a0aec0;
+            }
+
+            #rotation-title {
+                font-weight: bold;
+                font-size: 30px;
+                color: #ffffff;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            }
+
+            .main-cards {
+                display: flex;
+                gap: 2rem;
+                justify-content: space-between;
+            }
+
+            .card, .sub-card {
+                background-color: #1c1c1e;
+                padding: 1.5rem;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .card:hover, .sub-card:hover {
+                transform: translateY(-10px) scale(1.05);
+                background-color: #28282b;
+            }
+
+            .card {
+                flex: 1;
+                margin: 0 1rem;
+            }
+
+            .card img {
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .card .text-lg {
+                font-size: 1.25rem;
+                text-align: center;
+                margin-top: 1.5rem;
+            }
+
+            .price-tag {
+                background: rgba(0, 0, 0, 0.8);
+                padding: 0.75rem 1.5rem;
+                border-radius: 12px;
+                color: #fff;
+                font-size: 1.125rem;
+                text-align: center;
+                margin-top: 0.75rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            }
+
+            .price-tag img {
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-left: 0.5rem;
+            }
+
+            .sub-cards-container {
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            .sub-cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .sub-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .sub-card img {
+                border-radius: 8px;
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+
+            .sub-card .text-lg {
+                font-size: 1.125rem;
+                text-align: center;
+            }
+
+            #v-bucks {
+                width: 24px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <span id="rotation-title" class="rotation-title">Current Rotation</span>
+                <span class="rotation-date" id="date"></span>
+            </div>
+            <div class="main-cards">
+    
+        <div class="card">
+            <img src="https://fortnite.gg/img/items/773/featured.png?2" alt="Sleuth">
+            <div class="text-lg">Sleuth</div>
+            <div class="price-tag">1500 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+        <div class="card">
+            <img src="https://fortnite.gg/img/items/772/featured.png?2" alt="Gumshoe">
+            <div class="text-lg">Gumshoe</div>
+            <div class="price-tag">1500 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+                <div class="sub-cards-container">
+                    <div class="sub-cards">
+    
+        <div class="sub-card">
+            <img src="https://fortnite-api.com/images/cosmetics/br/EID_IrishJig/icon.png" alt="Step It Up">
+            <div class="text-lg">Step It Up</div>
+            <div class="price-tag">500 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+        <div class="sub-card">
+            <img src="https://fortnite-api.com/images/cosmetics/br/Pickaxe_ID_014_WinterCamo/icon.png" alt="Ice Breaker">
+            <div class="text-lg">Ice Breaker</div>
+            <div class="price-tag">500 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+        <div class="sub-card">
+            <img src="https://fortnite-api.com/images/cosmetics/br/CID_075_Athena_Commando_F_Stripe/icon.png" alt="Tactics Officer">
+            <div class="text-lg">Tactics Officer</div>
+            <div class="price-tag">800 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+        <div class="sub-card">
+            <img src="https://fortnite-api.com/images/cosmetics/br/Pickaxe_ID_015_HolidayCandyCane/icon.png" alt="Candy Axe">
+            <div class="text-lg">Candy Axe</div>
+            <div class="price-tag">1200 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+        <div class="sub-card">
+            <img src="https://fortnite-api.com/images/cosmetics/br/EID_Wiggle/icon.png" alt="Wiggle">
+            <div class="text-lg">Wiggle</div>
+            <div class="price-tag">500 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+        <div class="sub-card">
+            <img src="https://fortnite-api.com/images/cosmetics/br/EID_WolfHowl/icon.png" alt="Howl">
+            <div class="text-lg">Howl</div>
+            <div class="price-tag">200 V-Bucks <img src="images/v-bucks.png" id="v-bucks" alt="V-Bucks"></div>
+        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function formatDate(date) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return date.toLocaleDateString(undefined, options);
+            }
+
+            const dateElement = document.getElementById('date');
+            const currentDate = new Date();
+            dateElement.textContent = formatDate(currentDate);
+
+            function updateTime() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString();
+                document.getElementById('current-time').innerText = timeString;
+            }
+            updateTime(); // Initial call to set the time immediately
+            setInterval(updateTime, 1000); // Update the time every second
+        </script>
+    </body>
+    </html>
+    
